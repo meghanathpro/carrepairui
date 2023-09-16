@@ -90,7 +90,8 @@ class ServiceScreen extends StatelessWidget {
               const Spacer(),
               Container(
                 margin: const EdgeInsets.only(top: 10, right: 10),
-                child: ElevatedButton(onPressed: () {}, child: Icon(Icons.add)),
+                child: ElevatedButton(
+                    onPressed: () {}, child: const Icon(Icons.add)),
               )
             ],
           ),

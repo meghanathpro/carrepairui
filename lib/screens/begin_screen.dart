@@ -33,94 +33,88 @@ class _BeginScreenState extends State<BeginScreen> {
             child: LoadingAnimationWidget.threeArchedCircle(
                 color: Theme.of(context).colorScheme.primary, size: 35),
           ),
-          SingleChildScrollView(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                const SizedBox(
-                  height: 120,
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const SizedBox(height: 60),
+              Container(
+                alignment: Alignment.center,
+                child: Image.asset(
+                  'assets/images/logo.png',
+                  width: 90,
+                  height: 90,
                 ),
-                Container(
-                  alignment: Alignment.center,
-                  child: Image.asset(
-                    'assets/images/logo.png',
-                    width: 90,
-                    height: 90,
+              ),
+              const SizedBox(
+                height: 24,
+              ),
+              const Text(
+                "ILIGHT Car Care",
+                style: TextStyle(
+                  fontSize: 22,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+              const Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Text(
+                    "Your Car's Trusted ",
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                    ),
                   ),
-                ),
-                const SizedBox(
-                  height: 24,
-                ),
-                const Text(
-                  "ILIGHT Car Care",
-                  style: TextStyle(
-                    fontSize: 22,
-                    fontWeight: FontWeight.w600,
+                  Text(
+                    "Maintenance Expert",
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                    ),
                   ),
+                ],
+              ),
+              const Spacer(),
+              Container(
+                alignment: Alignment.center,
+                child: Image.asset(
+                  'assets/images/beginlogo.png',
                 ),
-                const SizedBox(
-                  height: 60,
-                ),
-                const Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
+              ),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: Theme.of(context).colorScheme.secondary,
+                    foregroundColor: Theme.of(context).colorScheme.onSecondary,
+                    textStyle: const TextStyle(fontSize: 14)),
+                onPressed: () {
+                  Navigator.of(context).push(_createRoute());
+                },
+                child: const Text('Continue'),
+              ),
+              const SizedBox(
+                height: 20,
+              )
+              /* Container(
+                padding:
+                    const EdgeInsets.symmetric(vertical: 8.0, horizontal: 18.0),
+                child: Row(
                   children: [
-                    Text(
-                      "Your Car's Trusted ",
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w600,
+                    Expanded(
+                      child: TextFormField(
+                        keyboardType: TextInputType.phone,
+                        decoration: const InputDecoration(
+                            hintText: 'Enter mobile number',
+                            enabledBorder: InputBorder.none),
                       ),
                     ),
-                    Text(
-                      "Maintenance Expert",
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w600,
-                      ),
+                    const SizedBox(
+                      width: 4.0,
                     ),
+                    
                   ],
                 ),
-                const SizedBox(
-                  height: 110,
-                ),
-                Container(
-                  alignment: Alignment.center,
-                  child: Image.asset(
-                    'assets/images/beginlogo.png',
-                  ),
-                ),
-                /* Container(
-                  padding:
-                      const EdgeInsets.symmetric(vertical: 8.0, horizontal: 18.0),
-                  child: Row(
-                    children: [
-                      Expanded(
-                        child: TextFormField(
-                          keyboardType: TextInputType.phone,
-                          decoration: const InputDecoration(
-                              hintText: 'Enter mobile number',
-                              enabledBorder: InputBorder.none),
-                        ),
-                      ),
-                      const SizedBox(
-                        width: 4.0,
-                      ),
-                      ElevatedButton(
-                          style: ElevatedButton.styleFrom(
-                              backgroundColor:
-                                  Theme.of(context).colorScheme.secondary,
-                              foregroundColor:
-                                  Theme.of(context).colorScheme.onSecondary,
-                              textStyle: const TextStyle(fontSize: 14)),
-                          onPressed: () {
-                            Navigator.of(context).push(_createRoute());
-                          },
-                          child: const Text('Continue'))
-                    ],
-                  ),
-                ) */
-              ],
-            ),
+              ) */
+            ],
           ),
         ],
       ),

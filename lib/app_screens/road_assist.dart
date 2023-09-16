@@ -67,10 +67,18 @@ class RoadAssistanceForm extends StatelessWidget {
                     fontWeight: FontWeight.w500),
               ),
             ),
-            const Center(
+            Center(
               child: TextFieldContainer(
                 child: TextField(
-                  decoration: InputDecoration(hintText: '(Optional)'),
+                  decoration: InputDecoration(
+                    hintText: '(Optional)',
+                    enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(
+                          width: 1,
+                          color: Theme.of(context).colorScheme.primary),
+                      borderRadius: const BorderRadius.all(Radius.circular(20)),
+                    ),
+                  ),
                 ),
               ),
             ),
@@ -119,11 +127,18 @@ class RoadAssistanceForm extends StatelessWidget {
                     fontWeight: FontWeight.w500),
               ),
             ),
-            const Center(
+            Center(
               child: TextFieldContainer(
                 child: TextField(
                   decoration: InputDecoration(
-                      hintText: '(Optional) e.g., nearby landmarks..'),
+                    hintText: '(Optional) e.g., nearby landmark',
+                    enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(
+                          width: 1,
+                          color: Theme.of(context).colorScheme.primary),
+                      borderRadius: const BorderRadius.all(Radius.circular(20)),
+                    ),
+                  ),
                 ),
               ),
             ),
@@ -137,11 +152,18 @@ class RoadAssistanceForm extends StatelessWidget {
                     fontWeight: FontWeight.w500),
               ),
             ),
-            const Center(
+            Center(
               child: TextFieldContainer(
                 child: TextField(
                   decoration: InputDecoration(
-                      hintText: 'e.g., Emergency Repairs,Towing Services..'),
+                    hintText: 'e.g., Emergency Repairs,Towing Services..',
+                    enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(
+                          width: 1,
+                          color: Theme.of(context).colorScheme.primary),
+                      borderRadius: const BorderRadius.all(Radius.circular(20)),
+                    ),
+                  ),
                 ),
               ),
             ),
@@ -155,11 +177,18 @@ class RoadAssistanceForm extends StatelessWidget {
                     fontWeight: FontWeight.w500),
               ),
             ),
-            const Center(
+            Center(
               child: TextFieldContainer(
                 child: TextField(
                   decoration: InputDecoration(
-                      hintText: '(Optional) any additional information..'),
+                    hintText: '(Optional) any additional information..',
+                    enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(
+                          width: 1,
+                          color: Theme.of(context).colorScheme.primary),
+                      borderRadius: const BorderRadius.all(Radius.circular(20)),
+                    ),
+                  ),
                 ),
               ),
             ),
@@ -236,8 +265,8 @@ class TextFieldContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 20),
-      width: size.width * 0.9,
+      padding: const EdgeInsets.symmetric(horizontal: 10),
+      width: size.width * 0.95,
       child: child,
     );
   }
