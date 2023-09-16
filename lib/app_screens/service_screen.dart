@@ -71,7 +71,7 @@ class ServiceScreen extends StatelessWidget {
                 padding: const EdgeInsets.only(left: 10),
                 alignment: Alignment.center,
                 margin: const EdgeInsets.only(
-                  right: 20,
+                  right: 10,
                   top: 10,
                 ),
                 width: 120,
@@ -87,14 +87,11 @@ class ServiceScreen extends StatelessWidget {
                   ],
                 ),
               ),
+              const Spacer(),
               Container(
-                  padding: const EdgeInsets.only(top: 10),
-                  child: ElevatedButton(
-                      onPressed: () {},
-                      child: const Text(
-                        "ADD CAR",
-                        style: TextStyle(color: Colors.black),
-                      )))
+                margin: const EdgeInsets.only(top: 10, right: 10),
+                child: ElevatedButton(onPressed: () {}, child: Icon(Icons.add)),
+              )
             ],
           ),
           Container(
@@ -117,15 +114,18 @@ class ServiceScreen extends StatelessWidget {
             height: 80,
             child: Row(
               children: [
-                Icon(
-                  Icons.library_books,
-                  size: 50,
-                  color: Theme.of(context).colorScheme.primary,
+                Expanded(
+                  child: Icon(
+                    Icons.library_books,
+                    size: 50,
+                    color: Theme.of(context).colorScheme.primary,
+                  ),
                 ),
                 Container(
-                  margin: const EdgeInsets.only(top: 10, left: 20),
+                  margin: const EdgeInsets.only(left: 20),
                   child: const Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
                         "Insurance Expiring Soon!!",
@@ -263,7 +263,7 @@ class ServiceScreen extends StatelessWidget {
             child: Column(
               children: [
                 Container(
-                  padding: const EdgeInsets.all(20),
+                  padding: const EdgeInsets.all(10),
                   decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(45)),

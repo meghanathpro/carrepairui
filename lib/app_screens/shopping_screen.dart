@@ -100,15 +100,17 @@ class ShoppingScreen extends StatelessWidget {
                     children: [
                       Icon(
                         Icons.filter_alt_outlined,
-                        size: 35,
+                        size: 32,
                       ),
                       Text(
                         "Filters",
                         style: TextStyle(fontSize: 24),
                       ),
-                      Icon(
-                        Icons.sort,
-                        size: 30,
+                      Expanded(
+                        child: Icon(
+                          Icons.sort,
+                          size: 30,
+                        ),
                       ),
                     ],
                   ),
@@ -137,7 +139,7 @@ class ShoppingScreen extends StatelessWidget {
                     children: [
                       ProductWidget(
                           imagename: 'assets/images/img3.jpg',
-                          text1: "Luckyman Club",
+                          text1: "Luckyman",
                           price: "\$67.99"),
                       ProductWidget(
                           imagename: 'assets/images/img4.jpg',
@@ -150,7 +152,7 @@ class ShoppingScreen extends StatelessWidget {
                     children: [
                       ProductWidget(
                           imagename: 'assets/images/img3.jpg',
-                          text1: "Luckyman Club",
+                          text1: "Luckyman",
                           price: "\$67.99"),
                       ProductWidget(
                           imagename: 'assets/images/img4.jpg',

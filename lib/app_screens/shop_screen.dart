@@ -80,12 +80,13 @@ class ShopScreen extends StatelessWidget {
                             )
                           ],
                         ),
-                        const Spacer(),
-                        Container(
-                          margin: const EdgeInsets.all(10),
-                          alignment: Alignment.center,
-                          child: Image.asset(
-                            'assets/images/offer.png',
+                        Expanded(
+                          child: Container(
+                            margin: const EdgeInsets.all(10),
+                            alignment: Alignment.center,
+                            child: Image.asset(
+                              'assets/images/offer.png',
+                            ),
                           ),
                         ),
                       ],
@@ -167,7 +168,7 @@ class ShopScreen extends StatelessWidget {
               SizedBox(width: 8),
               SmallCards(text1: "Dash", text2: "Cameras"),
               SizedBox(width: 8),
-              SmallCards(text1: "Lighting", text2: "Accessories"),
+              SmallCards(text1: "Lighting", text2: "Kits"),
             ],
           ),
           const SizedBox(
@@ -200,7 +201,7 @@ class SmallCards extends StatelessWidget {
     return ClipRRect(
       borderRadius: BorderRadius.circular(10),
       child: Container(
-        width: size.width * 0.25,
+        width: size.width * 0.27,
         height: 100,
         color: Colors.black12,
         child: Column(

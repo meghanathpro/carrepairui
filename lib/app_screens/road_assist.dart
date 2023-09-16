@@ -15,43 +15,45 @@ class RoadAssistanceForm extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Card(
-              color: Colors.white,
-              child: SizedBox(
-                height: 60,
-                width: double.infinity,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Container(
-                      margin: const EdgeInsets.only(left: 20),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            'NISSAN ALTIMA - A10234',
-                            style: TextStyle(
-                                color: Colors.grey.shade700,
-                                fontWeight: FontWeight.w600),
-                          ),
-                          Text(
-                            "2.5L Sport, Super Black",
-                            style: TextStyle(
-                                color: Colors.grey.shade700,
-                                fontWeight: FontWeight.w400),
-                          ),
-                        ],
+            Center(
+              child: Card(
+                color: Colors.white,
+                child: SizedBox(
+                  height: 60,
+                  width: MediaQuery.of(context).size.width * 0.9,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Container(
+                        margin: const EdgeInsets.only(left: 20),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              'NISSAN ALTIMA - A10234',
+                              style: TextStyle(
+                                  color: Colors.grey.shade700,
+                                  fontWeight: FontWeight.w600),
+                            ),
+                            Text(
+                              "2.5L Sport, Super Black",
+                              style: TextStyle(
+                                  color: Colors.grey.shade700,
+                                  fontWeight: FontWeight.w400),
+                            ),
+                          ],
+                        ),
                       ),
-                    ),
-                    Container(
-                      margin: const EdgeInsets.only(right: 15),
-                      child: const Icon(
-                        Icons.arrow_drop_down,
-                        size: 35,
-                      ),
-                    )
-                  ],
+                      Container(
+                        margin: const EdgeInsets.only(right: 15),
+                        child: const Icon(
+                          Icons.arrow_drop_down,
+                          size: 35,
+                        ),
+                      )
+                    ],
+                  ),
                 ),
               ),
             ),
@@ -65,9 +67,11 @@ class RoadAssistanceForm extends StatelessWidget {
                     fontWeight: FontWeight.w500),
               ),
             ),
-            const TextFieldContainer(
-              child: TextField(
-                decoration: InputDecoration(hintText: '(Optional)'),
+            const Center(
+              child: TextFieldContainer(
+                child: TextField(
+                  decoration: InputDecoration(hintText: '(Optional)'),
+                ),
               ),
             ),
             Container(
@@ -80,40 +84,31 @@ class RoadAssistanceForm extends StatelessWidget {
                     fontWeight: FontWeight.w500),
               ),
             ),
-            const Card(
-              child: Padding(
-                padding: EdgeInsets.all(8.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Column(
+            Center(
+              child: SizedBox(
+                height: 80,
+                width: MediaQuery.of(context).size.width * 0.9,
+                child: const Card(
+                  child: Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Icon(
-                          Icons.location_pin,
-                          size: 30,
-                        ),
-                        Text("Select here")
+                        Column(
+                          children: [
+                            Icon(
+                              Icons.location_pin,
+                              size: 30,
+                            ),
+                            Text("Select here")
+                          ],
+                        )
                       ],
-                    )
-                  ],
+                    ),
+                  ),
                 ),
               ),
             ),
-            /* const TextFieldContainer(
-              child: TextField(
-                decoration: InputDecoration(
-                  hintText: 'Select here',
-                  prefixIcon: Icon(
-                    Icons.location_pin,
-                    size: 25,
-                  ),
-                  suffixIcon: Icon(
-                    Icons.gps_fixed,
-                    size: 20,
-                  ),
-                ),
-              ),
-            ), */
             Container(
               margin: const EdgeInsets.only(left: 20, top: 10),
               child: Text(
@@ -124,10 +119,12 @@ class RoadAssistanceForm extends StatelessWidget {
                     fontWeight: FontWeight.w500),
               ),
             ),
-            const TextFieldContainer(
-              child: TextField(
-                decoration: InputDecoration(
-                    hintText: '(Optional) e.g., nearby landmarks..'),
+            const Center(
+              child: TextFieldContainer(
+                child: TextField(
+                  decoration: InputDecoration(
+                      hintText: '(Optional) e.g., nearby landmarks..'),
+                ),
               ),
             ),
             Container(
@@ -140,10 +137,12 @@ class RoadAssistanceForm extends StatelessWidget {
                     fontWeight: FontWeight.w500),
               ),
             ),
-            const TextFieldContainer(
-              child: TextField(
-                decoration: InputDecoration(
-                    hintText: 'e.g., Emergency Repairs,Towing Services..'),
+            const Center(
+              child: TextFieldContainer(
+                child: TextField(
+                  decoration: InputDecoration(
+                      hintText: 'e.g., Emergency Repairs,Towing Services..'),
+                ),
               ),
             ),
             Container(
@@ -156,10 +155,12 @@ class RoadAssistanceForm extends StatelessWidget {
                     fontWeight: FontWeight.w500),
               ),
             ),
-            const TextFieldContainer(
-              child: TextField(
-                decoration: InputDecoration(
-                    hintText: '(Optional) any additional information..'),
+            const Center(
+              child: TextFieldContainer(
+                child: TextField(
+                  decoration: InputDecoration(
+                      hintText: '(Optional) any additional information..'),
+                ),
               ),
             ),
             Container(
@@ -172,52 +173,54 @@ class RoadAssistanceForm extends StatelessWidget {
                     fontWeight: FontWeight.w500),
               ),
             ),
-            const Card(
-              child: Padding(
-                padding: EdgeInsets.all(8.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Column(
+            Center(
+              child: SizedBox(
+                height: 90,
+                width: MediaQuery.of(context).size.width * 0.9,
+                child: const Card(
+                  child: Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Icon(
-                          Icons.camera_alt,
-                          size: 34,
-                        ),
-                        Text("(Optional)")
+                        Column(
+                          children: [
+                            Icon(
+                              Icons.camera_alt,
+                              size: 34,
+                            ),
+                            Text("(Optional)")
+                          ],
+                        )
                       ],
-                    )
-                  ],
-                ),
-              ),
-            )
-            /* const TextFieldContainer(
-              child: TextField(
-                decoration: InputDecoration(
-                    hintText: '(Optional) ',
-                    suffixIcon: Icon(Icons.camera_alt)),
-              ),
-            ), */
-            ,
-            const Spacer(),
-            Align(
-              alignment: Alignment.bottomRight,
-              child: TextButton(
-                style: TextButton.styleFrom(
-                    backgroundColor: Colors.redAccent.shade200,
-                    foregroundColor: Theme.of(context).colorScheme.onPrimary,
-                    //minimumSize: const Size(180, 60),
-                    shape: const ContinuousRectangleBorder()),
-                onPressed: () {},
-                child: const Text(
-                  "Submit Request",
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
+                    ),
+                  ),
                 ),
               ),
             ),
             const SizedBox(
-              height: 20,
-            )
+              height: 10,
+            ),
+            Align(
+              alignment: Alignment.bottomRight,
+              child: Padding(
+                padding: const EdgeInsets.only(right: 20),
+                child: TextButton(
+                  style: TextButton.styleFrom(
+                    backgroundColor: Colors.redAccent.shade200,
+                    foregroundColor: Theme.of(context).colorScheme.onPrimary,
+                  ),
+                  onPressed: () {},
+                  child: const Text(
+                    "Submit Request",
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
+                  ),
+                ),
+              ),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
           ],
         ),
       ),
